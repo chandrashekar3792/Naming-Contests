@@ -4,6 +4,7 @@
   "description": "Full stack javascript project using nodeJS and reactJS",
   "main": "index.js",
   "dependencies": {
+    "ejs": "^2.5.7",
     "express": "^4.15.4",
     "mongodb": "^2.2.31",
     "react": "^15.6.1",
@@ -22,7 +23,7 @@
     "webpack": "^3.5.5"
   },
   "scripts": {
-    "start":"node server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
