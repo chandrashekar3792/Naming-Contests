@@ -1,19 +1,20 @@
-const config = require('./config');
-console.log(config.port,config.nodeEnv,config.logStars('Server started'));
-const fs=require('fs');
+import config from './config';
+import apiRouter from './api';
 
-let express=require('express');
-let router=require('./api');
-const server=express();
-server.set('view engine','ejs');
+import express from 'express';
+const server = express();
 
-server.get('/',(req,res)=>{
-	res.render('index',{
-		content:'Hello Express and <em> EJS</em>'
-	});
+server.set('view engine', 'ejs');
+
+server.get('/', (req, res) => {
+  res.render('index', {
+    content: '...'
+  });
 });
-server.use('/api',router);
+
+server.use('/api', apiRouter);
 server.use(express.static('public'));
-server.listen(config.port,()=>{
-	console.info('Express listening on port',config.port);
+
+server.listen(config.port, () => {
+  console.info('Express listening on port', config.port);
 });

@@ -1,8 +1,9 @@
-const express=require('express');
-const router=express.Router();
+import express from 'express';
 
-router.get('/',(req,res)=>{
-	res.send({data:[]});
+const router = express.Router();
+
+router.get('/', (req, res) => {
+  res.send({ data: [] });
 });
 
-module.exports=router;
+export default router;
